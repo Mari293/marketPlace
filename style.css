@@ -1,0 +1,51 @@
+*{margin:0; padding:0;font-family: sans-serif;}
+body{ width: 100%;display: flex; flex-direction:column;background-color: #202020; }
+.header-marketPlace{background-color: #1A1A1B; width: 100%; height: 8rem;display: flex;justify-content: space-around;align-items: center;}  
+.header-marketPlace-right{display: flex; justify-content: space-evenly;width:5rem; align-items: center;}
+h1{font-size: 3rem;color: #fff;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.new-product{font-size: 1rem; color:#fff; text-decoration:none; }
+.new-product:hover{color:#37AA9C; text-decoration:none;}
+
+#principal-container {height: 100%;width: 100%;display: flex;justify-content: center;align-items: center;flex-wrap: wrap;}
+.card {width: 30rem;height: 20rem;display: flex;justify-content: space-evenly;align-items: center;  border-radius: 12px; border: #fff solid 1px; margin: 0.5rem;}
+.card_product{background-color:#EDEDED; display:flex; flex-direction: column; align-items: center;justify-content:space-evenly; width: 15rem; height: 20rem; object-fit: cover;border-top-left-radius:12px; border-bottom-left-radius:12px;}
+.card_information{display: flex; flex-direction: column; align-items: center; width: 15rem; height: 16rem; justify-content: space-evenly;}
+.description_card{width: 13rem; height: 12rem; text-align: center; color: #fff;overflow:hidden; text-overflow: ellipsis;}
+#img {width: 70%; height: auto;} 
+#h3 {font-size: 1.5rem;color: #020a24;text-align: center;} 
+.btn_card {width: 50%;height: 2.5rem;border-radius: 8px;  background: #94F3E4;color:#000 ;  cursor: pointer;  margin-top: 2rem; border: 1px; font-weight: bold;}
+.btn_card:hover {background: #37AA9C;color: #fff;font-weight: bold;}
+footer {background-color: #222222;margin-top: 0.5rem;display: flex;justify-content: space-around;align-items: center; flex-direction: column;} 
+.top-footer{background-color:#fff ; width: 100%; height: 7rem; display: flex; justify-content: space-evenly; align-items: center; flex-direction: column;}
+.top-footer-socialMedia img{height: 1rem; width: 1rem;}
+.down-footer{color: #fff; height: 3rem; display: flex; align-items: center;}
+
+.cart {padding: 1.5rem;position: absolute;width: 22rem;height: 100vh;right: 0;top: 8rem;background: #fffffc;box-shadow: -5px 0 4px #e5e5e5; overflow-y: scroll;}
+.cart-container {display: none;}
+.imgProduct{width: 20%;}
+.product-container{display: flex; flex-direction: column; background: #EDEDED; padding: 1rem; margin-bottom: 1rem;}
+.name-product{font-size: 20px; font-weight: bold;}
+.icons{cursor: pointer;}
+.trash{position: absolute;left: 85%; width: 5%;}
+.information-container{display: flex; flex-direction: column; align-items: center;}
+.info-img-container{display: flex; justify-content: flex-start; align-items: center; justify-items: flex-start;}
+.count-container{display: flex; justify-content: space-evenly; width: 8rem;}
+
+.modal-container{opacity: 0;visibility: hidden;position: fixed;z-index: 1000;width: 100vw;height: 100vh;top:0; left: 0; background:rgba(255, 255, 255, 0.5); display: flex;justify-content: center;align-items: center;border-radius: 10px;}
+.modal{width: 30rem;height:38rem;background-color: #fff; text-align: center;display:flex;flex-direction: column; justify-content: space-evenly;align-items: center;position: relative;transition: transform 1s;transform: translateY(0);}
+.modal > img  {height: 40%;}
+.modal-close{transform: translateY(-200%);}
+.close{position: absolute; top:2rem;right: 2rem; display: inline-block; width: 1.7rem; height: 1.7rem; background-color: #c44a4a;color: #fff; line-height: 1.7rem; cursor: pointer;border-radius:50%;}
+.modal-text{display:flex;flex-direction: column; justify-content: space-evenly; align-items: center; height: 20rem;}
+#name_product , #price_product{ width: 14rem; height: 1.5rem;}
+#name_product , #price_product, #description_product{text-align: center; font-size: 0.9rem;}
+#description_product{resize: none;}
+
+@media screen and (max-width:468px){
+    .card{width: 25rem; height: 15rem;}
+    .description_card{font-size: 0.84rem; width: 10rem; height: 8.5rem;}
+    .card_product, .card_information {height: 15rem;}
+    #h3 {font-size: 1.4rem;}
+    .btn_card{font-size: 0.84rem; height: 2rem;}
+    .down-footer{font-size: 0.85rem;}
+}
