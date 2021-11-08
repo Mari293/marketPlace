@@ -3,8 +3,7 @@ body{ width: 100%;display: flex; flex-direction:column;background-color: #202020
 .header-marketPlace{background-color: #1A1A1B; width: 100%; height: 8rem;display: flex;justify-content: space-around;align-items: center;}  
 .header-marketPlace-right{display: flex; justify-content: space-evenly;width:5rem; align-items: center;}
 h1{font-size: 3rem;color: #fff;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
-.new-product{font-size: 1rem; color:#fff; text-decoration:none; }
-.new-product:hover{color:#37AA9C; text-decoration:none;}
+
 
 #principal-container {height: 100%;width: 100%;display: flex;justify-content: center;align-items: center;flex-wrap: wrap;}
 .card {width: 30rem;height: 20rem;display: flex;justify-content: space-evenly;align-items: center;  border-radius: 12px; border: #fff solid 1px; margin: 0.5rem;}
@@ -42,10 +41,14 @@ footer {background-color: #222222;margin-top: 0.5rem;display: flex;justify-conte
 #description_product{resize: none;}
 
 @media screen and (max-width:468px){
-    .card{width: 25rem; height: 15rem;}
+    .header-marketPlace{flex-direction: column;}
+    #img{width: 50%;}
+    .card{width: 20rem; height: 33rem; flex-direction: column;}
     .description_card{font-size: 0.84rem; width: 10rem; height: 8.5rem;}
-    .card_product, .card_information {height: 15rem;}
+    .card_product, .card_information {height: 25rem; width: 20rem;}
+    .card_product{border-top-right-radius: 12px;border-bottom-left-radius:0px;}
     #h3 {font-size: 1.4rem;}
     .btn_card{font-size: 0.84rem; height: 2rem;}
     .down-footer{font-size: 0.85rem;}
 }
+

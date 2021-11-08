@@ -201,7 +201,7 @@ function calculateTotal(){
       return parseInt(product) === element.id;
     });
     if (allProducts[0].id === parseInt(product)){
-      total = total + allProducts[0].price;
+      total = total + allProducts[0].price * product;
     };
     seeTotal.textContent = `Total: $${price_product(total)}`;
   })
