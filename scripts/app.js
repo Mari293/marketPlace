@@ -4,62 +4,14 @@ const cart = document.querySelector('.cart');
 const productsCart = document.querySelector('.productsCart'); 
 const seeTotal = document.querySelector('.messageTotal');
 
-const closeModal = document.querySelector('.close');
-const openModal = document.querySelector('.new-product');
-const modal = document.querySelector('.modal');
-const modalContainer = document.querySelector('.modal-container');
-
-const addProduct = document.querySelector('.addProduct');
-const nameProduct = document.querySelector('#name_product');
-const priceProduct = document.querySelector('#price_product');
-const descriptionProduct = document.querySelector('#description_product');
-
 cart_products = [];
 
-openModal.addEventListener('click', seeModal);
-closeModal.addEventListener('click', hiddenModal);
-window.addEventListener('click', closeModalcontainer);
 btn_cart.addEventListener('click', seeCart);
-addProduct.addEventListener('click', addProducts);
 
 create_Cards()
 function seeCart(event){
   event.preventDefault();
   cart.classList.toggle('cart-container');
-}
-
-function seeModal(event){
-  event.preventDefault();
-  modalContainer.style.opacity = "1";
-  modalContainer.style.visibility = "visible";
-  modal.classList.toggle("modal-close");
-}
-
-function hiddenModal(){
-  modal.classList.toggle('modal-close');
-  setTimeout(function(){
-    modalContainer.style.opacity = "0";
-    modalContainer.style.visibility = "hidden";
-  },850);
-}
-
-function closeModalcontainer(event){
-  if (event.target==modalContainer){
-    modal.classList.toggle("modal-close");
-    setTimeout(function(){
-    modalContainer.style.opacity = "0";
-    modalContainer.style.visibility = "hidden";
-  },900);}
-}
-
-function addProducts(){
-  let id = {id: products.length + 1};
-  let name = {name: nameProduct.value};
-  let price = {price: priceProduct.value};
-  let img = showImg.src;
-  let description = {description: descriptionProduct.value};
-  let newProduct = Object.assign(id, name, price, img, description);
-  products.push(newProduct);
 }
 
 function create_Cards() {
@@ -203,6 +155,11 @@ function calculateTotal(){
     if (allProducts[0].id === parseInt(product)){
       total = total + allProducts[0].price * product;
     };
-    seeTotal.textContent = `Total: $${price_product(total)}`;
   })
+  if (cart_products.length === 0){
+    seeTotal.textContent = `Total: $0`;
+  }
+  else{
+    seeTotal.textContent = `Total: $${price_product(total)}`;
+  }
 }
