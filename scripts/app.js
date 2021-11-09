@@ -153,11 +153,11 @@ function calculateTotal(){
       return parseInt(product) === element.id;
     });
     if (allProducts[0].id === parseInt(product)){
-      total = total + allProducts[0].price * product;
+      total = total + allProducts[0].price;
     };
   })
   if (cart_products.length === 0){
-    seeTotal.textContent = `Total: $0`;
+    seeTotal.textContent = `Total: $0`
   }
   else{
     seeTotal.textContent = `Total: $${price_product(total)}`;
