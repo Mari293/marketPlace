@@ -1,9 +1,7 @@
 *{margin:0; padding:0;font-family: sans-serif;}
 body{ width: 100%;display: flex; flex-direction:column;background-color: #202020; }
 .header-marketPlace{background-color: #1A1A1B; width: 100%; height: 8rem;display: flex;justify-content: space-around;align-items: center;}  
-.header-marketPlace-right{display: flex; justify-content: space-evenly;width:5rem; align-items: center;}
 h1{font-size: 3rem;color: #fff;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
-
 
 #principal-container {height: 100%;width: 100%;display: flex;justify-content: center;align-items: center;flex-wrap: wrap;}
 .card {width: 30rem;height: 20rem;display: flex;justify-content: space-evenly;align-items: center;  border-radius: 12px; border: #fff solid 1px; margin: 0.5rem;}
@@ -29,16 +27,6 @@ footer {background-color: #222222;margin-top: 0.5rem;display: flex;justify-conte
 .information-container{display: flex; flex-direction: column; align-items: center;}
 .info-img-container{display: flex; justify-content: flex-start; align-items: center; justify-items: flex-start;}
 .count-container{display: flex; justify-content: space-evenly; width: 8rem;}
-
-.modal-container{opacity: 0;visibility: hidden;position: fixed;z-index: 1000;width: 100vw;height: 100vh;top:0; left: 0; background:rgba(255, 255, 255, 0.5); display: flex;justify-content: center;align-items: center;border-radius: 10px;}
-.modal{width: 30rem;height:38rem;background-color: #fff; text-align: center;display:flex;flex-direction: column; justify-content: space-evenly;align-items: center;position: relative;transition: transform 1s;transform: translateY(0);}
-.modal > img  {height: 40%;}
-.modal-close{transform: translateY(-200%);}
-.close{position: absolute; top:2rem;right: 2rem; display: inline-block; width: 1.7rem; height: 1.7rem; background-color: #c44a4a;color: #fff; line-height: 1.7rem; cursor: pointer;border-radius:50%;}
-.modal-text{display:flex;flex-direction: column; justify-content: space-evenly; align-items: center; height: 20rem;}
-#name_product , #price_product{ width: 14rem; height: 1.5rem;}
-#name_product , #price_product, #description_product{text-align: center; font-size: 0.9rem;}
-#description_product{resize: none;}
 
 @media screen and (max-width:468px){
     .header-marketPlace{flex-direction: column;}
